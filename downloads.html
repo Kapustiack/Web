@@ -4,70 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Downloads | Kapustiack</title>
+    <title>Projects | Kapustiack</title>
+    <meta http-equiv="refresh" content="0; url=projects.html">
+    <link rel="canonical" href="projects.html">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="downloads-page" style="opacity: 0; transition: opacity 0.8s ease;">
+<body class="content-page redirect-page">
     <div class="background"></div>
     <div class="noise"></div>
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
 
-    <nav class="top-nav fade-in-up">
-        <a href="index.html" class="home-btn" id="home-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            Home
-        </a>
-    </nav>
+    <main class="container message-panel">
+        <h1 class="error-title">Projects moved</h1>
+        <p class="message-text">The Downloads page is now Projects.</p>
+        <a class="link-btn project-glow" href="projects.html">Open Projects</a>
+    </main>
 
-    <div class="container fade-in-up" style="margin-top: 10vh;">
-        <h2 class="page-title">Downloads</h2>
-
-        <div class="card-container">
-            <div class="expandable-card" id="cheat-card">
-                <div class="card-header">
-                    <h3>Roblox Universal Cheat</h3>
-                    <div class="card-icon"></div>
-                </div>
-                <div class="card-content">
-                    <p class="card-description">To load it paste this in your executor:</p>
-                    <div class="code-wrapper">
-                        <pre class="code-block"
-                            id="script-code">loadstring(game:HttpGet("https://raw.githubusercontent.com/Kapustiack/RobloxScript/main/main.lua?t=" .. os.time()))()</pre>
-                        <button class="copy-btn" id="copy-btn">Copy</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="expandable-card" id="eu4-cheats-card">
-                <div class="card-header">
-                    <h3>EU4 - K. Cheats</h3>
-                    <div class="card-icon"></div>
-                </div>
-                <div class="card-content">
-                    <p class="card-description">Open the Steam Workshop page:</p>
-                    <a class="link-btn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3643049191"
-                        target="_blank" rel="noopener">EU4 - K. Cheats</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="status-bar">
-        <span class="status-text" id="status-text"></span>
-    </div>
-
-    <script src="script.js"></script>
     <script>
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
-        });
+        window.location.replace('projects.html');
     </script>
 </body>
 

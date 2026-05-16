@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Kapustiack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="content-page">
+    <div class="background"></div>
+    <div class="noise"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <nav class="site-nav">
+        <a href="index.html" class="nav-brand">Kapustiack</a>
+        <div class="nav-panel">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link nav-projects active">Projects</a>
+            <a href="https://discord.gg/VfEZWQSSGd" class="nav-link nav-discord" target="_blank" rel="noopener"
+                aria-label="Discord">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+                </svg>
+                <span>Discord</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container page-stack">
+        <h1 class="page-title">Projects</h1>
+
+        <div class="card-container">
+            <div class="expandable-card" id="cheat-card">
+                <div class="card-header">
+                    <h3>Roblox Universal Cheat</h3>
+                    <div class="card-icon"></div>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">To load it paste this in your executor:</p>
+                    <div class="code-wrapper">
+                        <pre class="code-block"
+                            id="script-code">loadstring(game:HttpGet("https://raw.githubusercontent.com/Kapustiack/RobloxScript/main/main.lua?t=" .. os.time()))()</pre>
+                        <button class="copy-btn" id="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expandable-card" id="eu4-cheats-card">
+                <div class="card-header">
+                    <h3>EU4 - K. Cheats</h3>
+                    <div class="card-icon"></div>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">Open the Steam Workshop page:</p>
+                    <a class="link-btn project-glow"
+                        href="https://steamcommunity.com/sharedfiles/filedetails/?id=3643049191" target="_blank"
+                        rel="noopener">EU4 - K. Cheats</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="status-bar">
+        <span class="status-text" id="status-text"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

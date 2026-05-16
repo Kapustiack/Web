@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const titleElement = document.getElementById('title');
-    const controls = document.getElementById('controls');
-    const downloadsBtn = document.getElementById('btn-downloads');
-    const contactBtn = document.getElementById('btn-contact');
-    const homeBtn = document.getElementById('home-btn');
     const orbs = document.querySelectorAll('.orb');
 
     if (titleElement) {
@@ -35,9 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, 100);
 
-        setTimeout(() => {
-            if (controls) controls.classList.add('visible');
-        }, spans.length * 80 + 1000);
     }
 
     if (orbs.length > 0) {
@@ -66,28 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (downloadsBtn) {
-        downloadsBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => { window.location.href = 'downloads.html'; }, 800);
-        });
-    }
+    document.querySelectorAll('a[href]').forEach((link) => {
+        const href = link.getAttribute('href');
+        const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#');
+        const opensNewTab = link.target === '_blank';
 
-    if (contactBtn) {
-        contactBtn.addEventListener('click', (e) => {
+        if (!isExternal && !opensNewTab) {
+            link.addEventListener('click', (e) => {
+                if (link.href === window.location.href) return;
+
+                e.preventDefault();
+                document.body.classList.add('page-leaving');
+                setTimeout(() => { window.location.href = href; }, 300);
+            });
+        }
+    });
+
+    document.querySelectorAll('.nav-discord').forEach((link) => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
             window.location.href = 'https://discord.gg/VfEZWQSSGd';
         });
-    }
-
-    if (homeBtn) {
-        homeBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.body.style.opacity = '0';
-            setTimeout(() => { window.location.href = 'index.html'; }, 800);
-        });
-    }
+    });
 
     const cards = document.querySelectorAll('.expandable-card');
     const copyBtn = document.getElementById('copy-btn');
