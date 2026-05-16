@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleElement = document.getElementById('title');
     const controls = document.getElementById('controls');
     const downloadsBtn = document.getElementById('btn-downloads');
+    const contactBtn = document.getElementById('btn-contact');
     const homeBtn = document.getElementById('home-btn');
     const orbs = document.querySelectorAll('.orb');
 
@@ -73,6 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (contactBtn) {
+        contactBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'https://discord.gg/VfEZWQSSGd';
+        });
+    }
+
     if (homeBtn) {
         homeBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -81,13 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const card = document.getElementById('cheat-card');
+    const cards = document.querySelectorAll('.expandable-card');
     const copyBtn = document.getElementById('copy-btn');
     const codeText = document.getElementById('script-code');
 
-    if (card) {
-        card.addEventListener('click', (e) => {
-            if (e.target !== copyBtn) card.classList.toggle('expanded');
+    if (cards.length > 0) {
+        cards.forEach((card) => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.closest('button, a')) card.classList.toggle('expanded');
+            });
         });
     }
 

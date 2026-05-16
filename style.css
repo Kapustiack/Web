@@ -31,6 +31,15 @@ body {
     position: relative;
 }
 
+body.downloads-page {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+}
+
 .background {
     position: fixed;
     top: 0;
@@ -114,6 +123,10 @@ body {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .controls.visible {
@@ -121,7 +134,8 @@ body {
     transform: translateY(0);
 }
 
-button {
+button,
+.link-btn {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(10px);
@@ -134,9 +148,12 @@ button {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
 }
 
-button::before {
+button::before,
+.link-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -150,18 +167,21 @@ button::before {
     transition: 0.5s;
 }
 
-button:hover::before {
+button:hover::before,
+.link-btn:hover::before {
     left: 100%;
 }
 
-button:hover {
+button:hover,
+.link-btn:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-button:active {
+button:active,
+.link-btn:active {
     transform: scale(0.98);
 }
 
