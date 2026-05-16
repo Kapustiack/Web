@@ -83,8 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const cards = document.querySelectorAll('.expandable-card');
-    const copyBtn = document.getElementById('copy-btn');
-    const codeText = document.getElementById('script-code');
 
     if (cards.length > 0) {
         cards.forEach((card) => {
@@ -94,19 +92,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (copyBtn && codeText) {
+    function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text).catch(() => fallbackCopyText(text));
+        }
+
+        return fallbackCopyText(text);
+    }
+
+    function fallbackCopyText(text) {
+        return new Promise((resolve, reject) => {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.setAttribute('readonly', '');
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            document.body.appendChild(textArea);
+            textArea.select();
+
+            try {
+                const didCopy = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                didCopy ? resolve() : reject(new Error('Copy failed'));
+            } catch (error) {
+                document.body.removeChild(textArea);
+                reject(error);
+            }
+        });
+    }
+
+    document.querySelectorAll('.copy-btn[data-copy-target]').forEach((copyBtn) => {
         copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(codeText.innerText).then(() => {
-                const originalText = copyBtn.innerText;
+            const copyTarget = document.getElementById(copyBtn.dataset.copyTarget);
+            if (!copyTarget) return;
+            const originalText = copyBtn.innerText;
+
+            copyText(copyTarget.innerText).then(() => {
                 copyBtn.innerText = 'Copied!';
                 copyBtn.style.color = '#10b981';
                 setTimeout(() => {
                     copyBtn.innerText = originalText;
                     copyBtn.style.color = '';
                 }, 2000);
+            }).catch(() => {
+                copyBtn.innerText = 'Failed';
+                copyBtn.style.color = '#ef4444';
+                setTimeout(() => {
+                    copyBtn.innerText = originalText;
+                    copyBtn.style.color = '';
+                }, 2000);
             });
         });
-    }
+    });
 
     window.addEventListener('click', (e) => {
         const ripple = document.createElement('div');

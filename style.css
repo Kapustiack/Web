@@ -421,6 +421,13 @@ button:active,
     overflow: hidden;
 }
 
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
 .code-block {
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
