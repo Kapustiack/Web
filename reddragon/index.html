@@ -14,7 +14,7 @@
         <section class="hero">
             <p class="kicker">Kapustiack_Dev</p>
             <h1>RedDragon</h1>
-            <p class="subtext">Compact diagnostic tools for quick checks from Telegram.</p>
+            <p class="subtext">Fast public diagnostics. Results are returned by the bot in chat.</p>
         </section>
 
         <section class="panel">
@@ -26,6 +26,7 @@
                     <option value="whois">Domain lookup</option>
                     <option value="headers">HTTP headers</option>
                     <option value="ssl">SSL certificate</option>
+                    <option value="subdomains">Subdomains</option>
                     <option value="hash">Hash text</option>
                     <option value="encode">Encode text</option>
                     <option value="decode">Decode text</option>
@@ -50,13 +51,14 @@
             <button class="tool-chip" data-tool="whois" data-placeholder="example.com">Domain</button>
             <button class="tool-chip" data-tool="headers" data-placeholder="https://example.com">Headers</button>
             <button class="tool-chip" data-tool="ssl" data-placeholder="example.com">SSL</button>
+            <button class="tool-chip" data-tool="subdomains" data-placeholder="example.com">Subs</button>
             <button class="tool-chip" data-tool="hash" data-placeholder="text to hash">Hash</button>
             <button class="tool-chip" data-tool="encode" data-placeholder="text to encode">Encode</button>
             <button class="tool-chip" data-tool="decode" data-placeholder="base64 or url encoded text">Decode</button>
             <button class="tool-chip" data-tool="url" data-placeholder="https://example.com/path">URL</button>
         </section>
 
-        <p class="status" id="status">Ready.</p>
+        <p class="status" id="status">Open from the bot keyboard for live results.</p>
     </main>
 
     <script src="app.js"></script>

@@ -13,6 +13,7 @@ const placeholders = {
     whois: 'example.com',
     headers: 'https://example.com',
     ssl: 'example.com',
+    subdomains: 'example.com',
     hash: 'text to hash',
     encode: 'text to encode',
     decode: 'base64 or url encoded text',
@@ -52,7 +53,7 @@ function sendToolRequest() {
 
     tg.HapticFeedback.impactOccurred('light');
     tg.sendData(JSON.stringify(payload));
-    setStatus('Sent to bot. Check Telegram chat.');
+    setStatus('Request sent. The bot will post the result in chat.');
 }
 
 if (tg) {
@@ -61,6 +62,7 @@ if (tg) {
     tg.MainButton.setText('Run Tool');
     tg.MainButton.onClick(sendToolRequest);
     tg.MainButton.show();
+    setStatus('Ready. Results will appear in Telegram chat.');
 }
 
 toolSelect.addEventListener('change', () => setTool(toolSelect.value));

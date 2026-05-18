@@ -3,13 +3,13 @@
 :root {
     color-scheme: dark;
     --bg: #060708;
-    --panel: rgba(18, 22, 28, 0.88);
+    --panel: rgba(14, 17, 22, 0.92);
     --panel-2: rgba(255, 255, 255, 0.055);
     --line: rgba(255, 255, 255, 0.12);
     --text: #f7f8fb;
     --muted: rgba(247, 248, 251, 0.68);
-    --red: #ff3f4f;
-    --cyan: #65f6d4;
+    --red: #ff4b55;
+    --cyan: #75f0d4;
 }
 
 * {
@@ -23,8 +23,8 @@ body {
     font-family: 'Outfit', system-ui, sans-serif;
     color: var(--text);
     background:
-        radial-gradient(circle at 18% 0%, rgba(255, 63, 79, 0.18), transparent 34%),
-        radial-gradient(circle at 90% 12%, rgba(101, 246, 212, 0.12), transparent 30%),
+        radial-gradient(circle at 18% 0%, rgba(255, 75, 85, 0.12), transparent 32%),
+        radial-gradient(circle at 90% 12%, rgba(117, 240, 212, 0.08), transparent 28%),
         linear-gradient(135deg, #060708 0%, #0c1015 52%, #08090b 100%);
     padding: max(18px, env(safe-area-inset-top)) 16px max(18px, env(safe-area-inset-bottom));
 }
@@ -42,11 +42,11 @@ body::before {
     width: min(100%, 520px);
     margin: 0 auto;
     display: grid;
-    gap: 14px;
+    gap: 12px;
 }
 
 .hero {
-    padding: 20px 4px 8px;
+    padding: 14px 4px 6px;
 }
 
 .kicker {
@@ -59,7 +59,7 @@ body::before {
 
 h1 {
     margin-top: 8px;
-    font-size: clamp(2.25rem, 13vw, 4.8rem);
+    font-size: clamp(2.1rem, 12vw, 4.2rem);
     line-height: 0.92;
     letter-spacing: 0;
 }
@@ -75,11 +75,11 @@ h1 {
 .panel {
     display: grid;
     gap: 14px;
-    padding: 16px;
+    padding: 14px;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 8px;
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.32);
 }
 
 .field {
@@ -110,7 +110,7 @@ select {
 }
 
 textarea {
-    min-height: 108px;
+    min-height: 96px;
     resize: vertical;
     padding: 12px;
     line-height: 1.45;
@@ -149,14 +149,14 @@ button.ghost,
 
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 8px;
 }
 
 .tool-chip {
     min-height: 42px;
     padding: 0 10px;
-    font-size: 0.9rem;
+    font-size: 0.84rem;
 }
 
 .tool-chip.active {
@@ -173,7 +173,7 @@ button.ghost,
 
 @media (max-width: 360px) {
     .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .actions {
