@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Kapustiack</title>
+    <meta name="description" content="Projects by Kapustiack, including scripts, tools, and Steam Workshop mods.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="content-page">
     <div class="background"></div>
     <div class="noise"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
 
     <nav class="site-nav">
         <a href="index.html" class="nav-brand">Kapustiack</a>
@@ -32,72 +30,69 @@
     </nav>
 
     <main class="container page-stack">
-        <h1 class="page-title">Projects</h1>
+        <header class="page-header">
+            <p class="eyebrow">Selected work</p>
+            <h1 class="page-title">Projects</h1>
+        </header>
 
-        <div class="card-container">
-            <div class="expandable-card" id="cheat-card">
-                <div class="card-header">
-                    <h3>Roblox Universal Cheat</h3>
-                    <div class="card-icon"></div>
+        <section class="project-grid" aria-label="Projects">
+            <article class="project-card featured" id="age-unbound-card">
+                <div>
+                    <p class="project-type">Steam Workshop Mod</p>
+                    <h2>Age Unbound</h2>
+                    <p>Open the Steam Workshop page for my Age Unbound mod.</p>
                 </div>
-                <div class="card-content">
-                    <p class="card-description">To load it paste this in your executor:</p>
-                    <div class="code-wrapper">
-                        <pre class="code-block"
-                            id="script-code">loadstring(game:HttpGet("https://raw.githubusercontent.com/Kapustiack/RobloxScript/main/main.lua?t=" .. os.time()))()</pre>
-                        <button class="copy-btn" data-copy-target="script-code">Copy</button>
-                    </div>
-                </div>
-            </div>
+                <a class="link-btn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3507195478"
+                    target="_blank" rel="noopener">Open Steam</a>
+            </article>
 
-            <div class="expandable-card" id="lumafetch-card">
-                <div class="card-header">
-                    <h3>LumaFetch - Universall Downloader</h3>
-                    <div class="card-icon"></div>
+            <article class="project-card" id="eu4-cheats-card">
+                <div>
+                    <p class="project-type">Steam Workshop</p>
+                    <h2>EU4 - K. Cheats</h2>
+                    <p>Steam Workshop page for the EU4 cheat project.</p>
                 </div>
-                <div class="card-content">
-                    <p class="card-description">GitHub repository link:</p>
-                    <div class="code-wrapper">
-                        <pre class="code-block" id="lumafetch-url">https://github.com/Kapustiack/LumaFetch</pre>
-                        <button class="copy-btn" data-copy-target="lumafetch-url">Copy</button>
-                    </div>
-                    <div class="project-actions">
-                        <a class="link-btn project-glow" href="https://github.com/Kapustiack/LumaFetch" target="_blank"
-                            rel="noopener">Open GitHub</a>
-                    </div>
-                </div>
-            </div>
+                <a class="link-btn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3643049191"
+                    target="_blank" rel="noopener">Open Steam</a>
+            </article>
 
-            <div class="expandable-card" id="eu4-cheats-card">
-                <div class="card-header">
-                    <h3>EU4 - K. Cheats</h3>
-                    <div class="card-icon"></div>
+            <article class="project-card" id="lumafetch-card">
+                <div>
+                    <p class="project-type">Tool</p>
+                    <h2>LumaFetch</h2>
+                    <p>Universal downloader repository on GitHub.</p>
                 </div>
-                <div class="card-content">
-                    <p class="card-description">Open the Steam Workshop page:</p>
-                    <a class="link-btn project-glow"
-                        href="https://steamcommunity.com/sharedfiles/filedetails/?id=3643049191" target="_blank"
-                        rel="noopener">EU4 - K. Cheats</a>
+                <div class="project-actions">
+                    <a class="link-btn" href="https://github.com/Kapustiack/LumaFetch" target="_blank"
+                        rel="noopener">Open GitHub</a>
+                    <button class="copy-btn inline-copy" data-copy-text="https://github.com/Kapustiack/LumaFetch">Copy
+                        Link</button>
                 </div>
-            </div>
+            </article>
 
-            <div class="expandable-card expanded" id="roblox-portfolio-card">
-                <div class="card-header">
-                    <h3>Portfolio (Roblox)</h3>
-                    <div class="card-icon"></div>
+            <article class="project-card" id="cheat-card">
+                <div>
+                    <p class="project-type">Roblox Script</p>
+                    <h2>Roblox Universal Cheat</h2>
+                    <p>Copy the loader for your executor.</p>
                 </div>
-                <div class="card-content">
-                    <p class="card-description">Open the Roblox portfolio page:</p>
-                    <a class="link-btn project-glow" href="https://kapustiak-maker.github.io/My-website"
-                        target="_blank" rel="noopener">Portfolio (Roblox)</a>
+                <div class="code-wrapper">
+                    <pre class="code-block" id="script-code">loadstring(game:HttpGet("https://raw.githubusercontent.com/Kapustiack/RobloxScript/main/main.lua?t=" .. os.time()))()</pre>
+                    <button class="copy-btn" data-copy-target="script-code">Copy</button>
                 </div>
-            </div>
-        </div>
+            </article>
+
+            <article class="project-card" id="roblox-portfolio-card">
+                <div>
+                    <p class="project-type">Portfolio</p>
+                    <h2>Portfolio (Roblox)</h2>
+                    <p>My Roblox portfolio page.</p>
+                </div>
+                <a class="link-btn" href="https://kapustiak-maker.github.io/My-website" target="_blank"
+                    rel="noopener">Open Site</a>
+            </article>
+        </section>
     </main>
-
-    <div class="status-bar">
-        <span class="status-text" id="status-text"></span>
-    </div>
 
     <script src="script.js"></script>
 </body>
