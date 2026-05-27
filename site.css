@@ -1,11 +1,11 @@
 :root {
-    --paper: #fbfaf5;
-    --ink: #101010;
-    --soft-ink: #4b4b4b;
-    --line: #101010;
-    --wash: #f2f0e8;
-    --wash-2: #ffffff;
-    --shade: rgba(16, 16, 16, 0.08);
+    --paper: #050505;
+    --ink: #ffffff;
+    --soft-ink: #c8c8c8;
+    --line: #ffffff;
+    --wash: #0e0e0e;
+    --wash-2: #080808;
+    --shade: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -21,9 +21,9 @@ html {
 body {
     min-height: 100vh;
     background:
-        linear-gradient(90deg, rgba(16, 16, 16, 0.035) 1px, transparent 1px),
-        linear-gradient(rgba(16, 16, 16, 0.028) 1px, transparent 1px),
-        radial-gradient(circle at 20% 8%, rgba(16, 16, 16, 0.08), transparent 13rem),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        radial-gradient(circle at 20% 8%, rgba(255, 255, 255, 0.12), transparent 13rem),
         var(--paper);
     background-size: 44px 44px, 44px 44px, auto;
     color: var(--ink);
@@ -65,8 +65,7 @@ a {
 }
 
 .topbar {
-    position: sticky;
-    top: 18px;
+    position: relative;
     z-index: 10;
     display: flex;
     align-items: center;
@@ -110,13 +109,14 @@ a {
 
 .nav-link {
     padding: 0 13px;
-    background: var(--wash-2);
+    background: var(--ink);
+    color: var(--paper);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--paper);
+    color: var(--ink);
 }
 
 .home,
@@ -191,7 +191,8 @@ h1 {
 
 .button {
     padding: 0 16px;
-    background: var(--wash-2);
+    background: var(--ink);
+    color: var(--paper);
     cursor: pointer;
 }
 
@@ -213,7 +214,8 @@ h1 {
 
 .button-ghost,
 .button-inline {
-    background: var(--wash-2);
+    background: var(--ink);
+    color: var(--paper);
 }
 
 .button:disabled {
@@ -362,14 +364,13 @@ h1 {
     }
 
     .topbar {
-        top: 10px;
         align-items: stretch;
         flex-direction: column;
     }
 
     .nav {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
     }
 
     .nav-link {
