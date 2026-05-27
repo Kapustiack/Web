@@ -127,8 +127,8 @@ a {
 
 .home {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 390px;
-    gap: 24px;
+    grid-template-columns: minmax(0, 0.95fr) 390px;
+    gap: 28px;
     align-items: start;
 }
 
@@ -139,7 +139,7 @@ a {
 }
 
 .hero {
-    padding: 46px 0 20px;
+    padding: 34px 0 12px;
 }
 
 .eyebrow,
@@ -157,9 +157,9 @@ a {
 }
 
 h1 {
-    max-width: 9ch;
-    font-size: clamp(4rem, 10vw, 8rem);
-    line-height: 0.88;
+    max-width: 8ch;
+    font-size: clamp(3.3rem, 7vw, 6.1rem);
+    line-height: 0.9;
     letter-spacing: 0;
     text-transform: uppercase;
     text-shadow: 3px 3px 0 rgba(16, 16, 16, 0.12);
@@ -171,7 +171,7 @@ h1 {
 }
 
 .lede {
-    max-width: 62ch;
+    max-width: 56ch;
     color: var(--soft-ink);
     font-size: 1.08rem;
     font-weight: 700;
@@ -402,7 +402,7 @@ h1 {
     }
 
     h1 {
-        font-size: 3.4rem;
+        font-size: 3.1rem;
     }
 
     .projects-head h1 {
