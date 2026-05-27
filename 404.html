@@ -8,44 +8,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="content-page">
-    <div class="background"></div>
-    <div class="noise"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html">Kapustiack</a>
+            <nav class="nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="https://discord.gg/VfEZWQSSGd" target="_blank" rel="noopener">Discord</a>
+            </nav>
+        </header>
 
-    <nav class="site-nav">
-        <a href="index.html" class="nav-brand">Kapustiack</a>
-        <div class="nav-panel">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="projects.html" class="nav-link nav-projects">Projects</a>
-            <a href="https://discord.gg/VfEZWQSSGd" class="nav-link nav-discord" target="_blank" rel="noopener"
-                aria-label="Discord">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
-                </svg>
-                <span>Discord</span>
-            </a>
-        </div>
-    </nav>
-
-    <main class="container message-panel">
-        <p class="error-kicker">404</p>
-        <h1 class="error-title">Page not found</h1>
-        <p class="message-text">That link does not exist here, but the main pages are still online.</p>
-        <div class="message-actions">
-            <a class="link-btn home-glow" href="index.html">Home</a>
-            <a class="link-btn project-glow" href="projects.html">Projects</a>
-        </div>
-    </main>
-
-    <div class="status-bar">
-        <span class="status-text" id="status-text"></span>
+        <main class="notice">
+            <p class="card-label">404</p>
+            <h1>Page not found</h1>
+            <p class="lede">That page does not exist here.</p>
+            <div class="actions">
+                <a class="button button-primary" href="index.html">Home</a>
+                <a class="button button-ghost" href="projects.html">Projects</a>
+            </div>
+        </main>
     </div>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

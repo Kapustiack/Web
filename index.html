@@ -5,44 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapustiack</title>
-    <meta name="description" content="Kapustiack's projects, scripts, tools, and Steam Workshop mods.">
+    <meta name="description" content="Kapustiack's projects, mods, tools, and links.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="background"></div>
-    <div class="noise"></div>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html">Kapustiack</a>
+            <nav class="nav">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="https://discord.gg/VfEZWQSSGd" target="_blank" rel="noopener">Discord</a>
+            </nav>
+        </header>
 
-    <nav class="site-nav">
-        <a href="index.html" class="nav-brand">Kapustiack</a>
-        <div class="nav-panel">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="projects.html" class="nav-link nav-projects">Projects</a>
-            <a href="https://discord.gg/VfEZWQSSGd" class="nav-link nav-discord" target="_blank" rel="noopener"
-                aria-label="Discord">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
-                </svg>
-                <span>Discord</span>
-            </a>
-        </div>
-    </nav>
+        <main class="home">
+            <section class="hero">
+                <p class="eyebrow">Minimal projects and clean links</p>
+                <h1>Kapustiack</h1>
+                <p class="lede">A simple place for scripts, Steam Workshop mods, tools, and the links people actually use.</p>
+                <div class="actions">
+                    <a class="button button-primary" href="projects.html">View Projects</a>
+                    <a class="button button-ghost" href="https://kapustiak-maker.github.io/My-website" target="_blank" rel="noopener">Portfolio</a>
+                </div>
+            </section>
 
-    <main class="hero-container">
-        <p class="eyebrow">Scripts, tools, and mods</p>
-        <h1 id="title">Kapustiack</h1>
-
-        <section class="intro-panel" aria-label="About Kapustiack">
-            <p>Hello, I am Kapustiack. I build game tools, scripts, Steam Workshop projects, and small programs that
-                are useful, fast, and easy to reach from here.</p>
-            <div class="project-actions">
-                <a class="link-btn" href="projects.html">View Projects</a>
-                <a class="link-btn subtle" href="https://kapustiak-maker.github.io/My-website" target="_blank"
-                    rel="noopener">Portfolio</a>
-            </div>
-        </section>
-    </main>
+            <section class="overview">
+                <article class="overview-card">
+                    <span class="card-label">Featured</span>
+                    <h2>Age Unbound</h2>
+                    <p>The Steam Workshop mod is now listed on the site first so it is easy to find.</p>
+                    <a class="text-link" href="projects.html#age-unbound">Open projects</a>
+                </article>
+                <article class="overview-card">
+                    <span class="card-label">Links</span>
+                    <h2>Discord and portfolio</h2>
+                    <p>The site keeps the same links, just in a cleaner layout with less visual noise.</p>
+                    <a class="text-link" href="projects.html">See everything</a>
+                </article>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
