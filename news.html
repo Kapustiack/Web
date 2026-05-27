@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News! | Kapustiack</title>
+    <meta name="description" content="Kapustiack news page for posting updates with a header and text.">
+    <link rel="stylesheet" href="site.css?v=20260527-6">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html">Kapustiack</a>
+            <nav class="nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link active" href="news.html">News!</a>
+                <a class="nav-link" href="https://discord.gg/VfEZWQSSGd" target="_blank" rel="noopener">Discord</a>
+            </nav>
+        </header>
+
+        <main class="news-page">
+            <section class="news-hero">
+                <p class="eyebrow">News!</p>
+                <h1>News!</h1>
+                <p class="lede">Write a header and a message below, publish it, and it will stay saved in this browser so the page updates with your posts.</p>
+            </section>
+
+            <section class="news-grid">
+                <form class="news-form" id="newsForm">
+                    <span class="card-label">New post</span>
+                    <h2>Create update</h2>
+                    <div class="field">
+                        <label for="newsHeader">Header</label>
+                        <input id="newsHeader" name="newsHeader" type="text" maxlength="80" required placeholder="Enter a headline">
+                    </div>
+                    <div class="field">
+                        <label for="newsText">Text</label>
+                        <textarea id="newsText" name="newsText" required placeholder="Write the news update here"></textarea>
+                    </div>
+                    <button class="button button-primary" type="submit">Publish</button>
+                </form>
+
+                <section class="news-feed" aria-label="News feed">
+                    <span class="card-label">Feed</span>
+                    <h2>Latest posts</h2>
+                    <div class="news-list" id="newsList"></div>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script src="news.js?v=20260527-1"></script>
+</body>
+
+</html>
