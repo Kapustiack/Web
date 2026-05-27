@@ -46,6 +46,78 @@
     box-shadow: 6px 6px 0 var(--line);
 }
 
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.86);
+    z-index: 1000;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: min(900px, 100%);
+    max-height: min(86vh, 900px);
+    overflow: auto;
+    padding: 24px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 3px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 10px 10px 0 var(--line);
+}
+
+.modal-content h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.modal-intro,
+.modal-updated {
+    margin-top: 10px;
+    color: var(--soft-ink);
+}
+
+.modal-body {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.modal-body h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.modal-body ol {
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--line);
+    border-radius: 6px;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
 @media (max-width: 820px) {
     .portfolio-grid,
     .work-grid {
